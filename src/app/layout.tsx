@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
 import { ThemeProvider } from "next-themes"; // Import the ThemeProvider
@@ -8,15 +9,33 @@ import { Toaster } from "@/components/ui/toaster"; // Import the Toaster compone
 // Font setup remains the same
 const geistSans = localFont({
   src: "/fonts/GeistVF.woff",
+=======
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import { ThemeProvider } from "next-themes"; // Import the ThemeProvider
+import "./globals.css";
+
+// Import the ToastProvider
+import { ToastProvider } from "@/components/ui/toast";  // Adjust this path as per your setup
+
+// Font setup remains the same
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
+<<<<<<< HEAD
   src: "/fonts/GeistMonoVF.woff",
+=======
+  src: "./fonts/GeistMonoVF.woff",
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
   variable: "--font-geist-mono",
   weight: "100 900",
 });
 
+<<<<<<< HEAD
 // SEO meta tags
 export const siteMetadata = {
   title: "Best Photography Studio in Ranchi - Pandav Studios | Wedding & Event Photography in Jharkhand",
@@ -55,6 +74,11 @@ export const siteMetadata = {
       "https://www.instagram.com/pandavstudios",
     ],
   },
+=======
+export const metadata: Metadata = {
+  title: "Pandav Studios",
+  description: "Capture the moments that matter",
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
 };
 
 export default function RootLayout({
@@ -64,6 +88,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <head>
         {/* General SEO */}
         <meta name="description" content={siteMetadata.description} />
@@ -117,6 +142,17 @@ export default function RootLayout({
           </ToastProvider>
         </ThemeProvider>
         <Analytics />
+=======
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {/* Wrap the entire app with ThemeProvider and ToastProvider */}
+        <ThemeProvider attribute="class" defaultTheme="system">
+          <ToastProvider>
+            {children}
+          </ToastProvider>
+        </ThemeProvider>
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       </body>
     </html>
   );

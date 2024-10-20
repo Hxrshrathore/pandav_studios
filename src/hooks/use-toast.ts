@@ -32,6 +32,7 @@ function genId() {
   return count.toString()
 }
 
+<<<<<<< HEAD
 type ActionType = typeof actionTypes
 
 type Action =
@@ -49,6 +50,23 @@ type Action =
     }
   | {
       type: ActionType["REMOVE_TOAST"]
+=======
+type Action =
+  | {
+      type: typeof actionTypes["ADD_TOAST"]
+      toast: ToasterToast
+    }
+  | {
+      type: typeof actionTypes["UPDATE_TOAST"]
+      toast: Partial<ToasterToast>
+    }
+  | {
+      type: typeof actionTypes["DISMISS_TOAST"]
+      toastId?: ToasterToast["id"]
+    }
+  | {
+      type: typeof actionTypes["REMOVE_TOAST"]
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       toastId?: ToasterToast["id"]
     }
 
@@ -76,13 +94,21 @@ const addToRemoveQueue = (toastId: string) => {
 
 export const reducer = (state: State, action: Action): State => {
   switch (action.type) {
+<<<<<<< HEAD
     case "ADD_TOAST":
+=======
+    case actionTypes.ADD_TOAST:
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       return {
         ...state,
         toasts: [action.toast, ...state.toasts].slice(0, TOAST_LIMIT),
       }
 
+<<<<<<< HEAD
     case "UPDATE_TOAST":
+=======
+    case actionTypes.UPDATE_TOAST:
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       return {
         ...state,
         toasts: state.toasts.map((t) =>
@@ -90,11 +116,17 @@ export const reducer = (state: State, action: Action): State => {
         ),
       }
 
+<<<<<<< HEAD
     case "DISMISS_TOAST": {
       const { toastId } = action
 
       // ! Side effects ! - This could be extracted into a dismissToast() action,
       // but I'll keep it here for simplicity
+=======
+    case actionTypes.DISMISS_TOAST: {
+      const { toastId } = action
+
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       if (toastId) {
         addToRemoveQueue(toastId)
       } else {
@@ -115,7 +147,11 @@ export const reducer = (state: State, action: Action): State => {
         ),
       }
     }
+<<<<<<< HEAD
     case "REMOVE_TOAST":
+=======
+    case actionTypes.REMOVE_TOAST:
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       if (action.toastId === undefined) {
         return {
           ...state,
@@ -126,6 +162,11 @@ export const reducer = (state: State, action: Action): State => {
         ...state,
         toasts: state.toasts.filter((t) => t.id !== action.toastId),
       }
+<<<<<<< HEAD
+=======
+    default:
+      return state
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
   }
 }
 
@@ -147,6 +188,7 @@ function toast({ ...props }: Toast) {
 
   const update = (props: ToasterToast) =>
     dispatch({
+<<<<<<< HEAD
       type: "UPDATE_TOAST",
       toast: { ...props, id },
     })
@@ -154,6 +196,15 @@ function toast({ ...props }: Toast) {
 
   dispatch({
     type: "ADD_TOAST",
+=======
+      type: actionTypes.UPDATE_TOAST,
+      toast: { ...props, id },
+    })
+  const dismiss = () => dispatch({ type: actionTypes.DISMISS_TOAST, toastId: id })
+
+  dispatch({
+    type: actionTypes.ADD_TOAST,
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
     toast: {
       ...props,
       id,
@@ -187,7 +238,11 @@ function useToast() {
   return {
     ...state,
     toast,
+<<<<<<< HEAD
     dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
+=======
+    dismiss: (toastId?: string) => dispatch({ type: actionTypes.DISMISS_TOAST, toastId }),
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
   }
 }
 

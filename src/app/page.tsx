@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Camera, ChevronRight, Instagram, Facebook, Youtube, Sun, Moon, ArrowUp, ChevronLeft, MapPin, Phone, Mail, Award } from "lucide-react"
+<<<<<<< HEAD
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
 import Image from "next/image"
 import Link from "next/link"
@@ -24,31 +25,68 @@ const heroSlides = [
 const testimonials = [
   { name: "Alice Johnson", role: "Bride", quote: "Pandav Studio made our wedding day unforgettable. The photos are breathtaking!" },
   { name: "John Smith", role: "Business Owner", quote: "Their commercial photography significantly improved our brand image." },
+=======
+import Image from "next/image"
+import Link from "next/link"
+import { useTheme } from "next-themes"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Skeleton } from "@/components/ui/skeleton"
+
+const heroSlides = [
+  { image: 'https://cdn.apnaventure.in/Images/1.jpg?height=600&width=1200', alt: 'Stunning landscape photography' },
+  { image: 'https://cdn.apnaventure.in/Images/2.jpg', alt: 'Beautiful portrait photography' },
+  { image: 'https://cdn.apnaventure.in/Images/3.jpg', alt: 'Captivating event photography' },
+]
+
+const testimonials = [
+  { name: "Alice Johnson", role: "Bride", quote: "Capture Studio made our wedding day unforgettable. The photos are breathtaking!" },
+  { name: "John Smith", role: "Business Owner", quote: "Their commercial photography has significantly improved our brand image." },
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
   { name: "Emily Davis", role: "Model", quote: "The portrait session was fun and the results exceeded my expectations." },
 ]
 
 const services = [
   { 
     title: "Wedding Photography", 
+<<<<<<< HEAD
     description: "Capture your special day with our professional wedding photography services in Ranchi and Jharkhand.", 
+=======
+    description: "Capture your special day with our professional wedding photography services.", 
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
     path: "/services/wedding-photography" 
   },
   { 
     title: "Portrait Photography", 
+<<<<<<< HEAD
     description: "Showcase your personality with our expert portrait photography sessions.", 
+=======
+    description: "Showcase your personality with our expert portrait photography.", 
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
     path: "/services/portrait-photography" 
   },
   { 
     title: "Commercial Photography", 
+<<<<<<< HEAD
     description: "Elevate your brand with high-quality commercial photography services.", 
+=======
+    description: "Elevate your brand with our high-quality commercial photography.", 
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
     path: "/services/commercial-photography" 
   },
 ]
 
+<<<<<<< HEAD
 const faqs = [
   { question: "What areas do you serve?", answer: "We primarily serve Ranchi and nearby areas, but we’re available for destination shoots across India." },
   { question: "How far in advance should I book?", answer: "For weddings, we recommend booking 6-12 months in advance. For other sessions, 2-4 weeks is usually sufficient." },
   { question: "Do you offer prints and albums?", answer: "Yes, we offer high-quality prints and custom-designed albums for all our photography services." },
+=======
+
+const faqs = [
+  { question: "What areas do you serve?", answer: "We primarily serve the greater metropolitan area, but we're available for destination shoots as well." },
+  { question: "How far in advance should I book?", answer: "For weddings, we recommend booking 6-12 months in advance. For other sessions, 2-4 weeks is usually sufficient." },
+  { question: "Do you offer prints and albums?", answer: "Yes, we offer a variety of high-quality prints and custom-designed albums for all our photography services." },
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
 ]
 
 export default function HomePage() {
@@ -59,7 +97,11 @@ export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+<<<<<<< HEAD
   const { toast } = useToast(); // Get the toast function from the hook
+=======
+  const [status, setStatus] = useState('');
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
 
   useEffect(() => {
     setMounted(true)
@@ -103,16 +145,26 @@ export default function HomePage() {
     event.preventDefault();
 
     try {
+<<<<<<< HEAD
       const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+=======
+      const response = await fetch('/sendEmail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData),
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
       });
 
       const result = await response.json();
       if (result.success) {
+<<<<<<< HEAD
         toast({
           title: "Request sent!",
           description: "We will get back to you soon.",
@@ -131,6 +183,18 @@ export default function HomePage() {
     }
   };
 
+=======
+        setStatus("Email sent successfully!");
+      } else {
+        setStatus(`Error: ${result.error}`);
+      }
+    } catch {
+      setStatus('Failed to send email.');
+    }
+  };
+
+
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
   if (loading) {
     return (
       <div className="flex items-center justify-center h-screen bg-background">
@@ -146,6 +210,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <div className="fixed top-0 left-0 w-full h-1 bg-primary z-50" style={{ width: `${scrollProgress}%` }} />
       <header className="sticky top-0 px-4 lg:px-6 h-14 flex items-center backdrop-blur-md bg-background/80 z-40">
+<<<<<<< HEAD
         <Link className="flex items-center justify-center" href="/">
                 <Image
                 src="/images/logo.png" // Replace this with the path to your logo file
@@ -155,6 +220,12 @@ export default function HomePage() {
                 />
             <span className="sr-only">Pandav Studios</span>
             </Link>
+=======
+        <Link className="flex items-center justify-center" href="#">
+          <Camera className="h-6 w-6" />
+          <span className="sr-only">Capture Studio</span>
+        </Link>
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/">
             Home
@@ -162,6 +233,7 @@ export default function HomePage() {
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/portfolio">
             Portfolio
           </Link>
+<<<<<<< HEAD
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/services">
             Services
           </Link>
@@ -169,6 +241,15 @@ export default function HomePage() {
             About
           </Link>
           <Link className="text-sm font-medium hover:underline underline-offset-4" href="/contact">
+=======
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="services">
+            Services
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="about">
+            About
+          </Link>
+          <Link className="text-sm font-medium hover:underline underline-offset-4" href="contact">
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
             Contact
           </Link>
         </nav>
@@ -187,7 +268,13 @@ export default function HomePage() {
           {heroSlides.map((slide, index) => (
             <div
               key={index}
+<<<<<<< HEAD
               className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+=======
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
             >
               <Image
                 src={slide.image}
@@ -195,7 +282,10 @@ export default function HomePage() {
                 layout="fill"
                 objectFit="cover"
                 priority={index === 0}
+<<<<<<< HEAD
                 loading={index === 0 ? 'eager' : 'lazy'}
+=======
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
               />
             </div>
           ))}
@@ -206,7 +296,11 @@ export default function HomePage() {
                   Capture Every Moment
                 </h1>
                 <p className="text-xl text-gray-200 mb-8">
+<<<<<<< HEAD
                   Professional wedding, portrait, and event photography services in Ranchi.
+=======
+                  Professional wedding, portrait, and commercial photography services.
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
                 </p>
                 <div className="space-x-4">
                   <Button size="lg">
@@ -236,12 +330,20 @@ export default function HomePage() {
             <div className="md:flex items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <Image
+<<<<<<< HEAD
                   src="https://cdn.apnaventure.in/Images/crew.webp?height=400&width=600"
                   alt="Our photography team in Ranchi"
                   width={600}
                   height={400}
                   className="rounded-lg"
                   loading="lazy"
+=======
+                  src="https://cdn.apnaventure.in/Images/crew.jpg?height=400&width=600"
+                  alt="Our team"
+                  width={600}
+                  height={400}
+                  className="rounded-lg"
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
                 />
               </div>
               <div className="md:w-1/2 md:pl-8">
@@ -289,12 +391,21 @@ export default function HomePage() {
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <Image
                   key={i}
+<<<<<<< HEAD
                   src={`https://cdn.apnaventure.in/Images/${i}.webp`}
                   alt={`Portfolio image ${i} from our Ranchi photoshoots`}
                   width={400}
                   height={300}
                   className="rounded-lg object-cover"
                   loading="lazy"
+=======
+                  src={`https://cdn.apnaventure.in/Images/${i}.jpg`}
+                  alt={`Portfolio image ${i}`}
+                  width={400}
+                  height={300}
+                  className="rounded-lg object-cover"
+                  style={{ width: '100%', height: '100%' }}
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
                 />
               ))}
             </div>
@@ -327,9 +438,13 @@ export default function HomePage() {
               <CarouselNext />
             </Carousel>
             <div className="text-center mt-8">
+<<<<<<< HEAD
               <a href="clinet-testimonials" className="no-underline">
                 <Button variant="outline">Read More Reviews</Button>
               </a>
+=======
+              <Button variant="outline">Read More Reviews</Button>
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
             </div>
           </div>
         </section>
@@ -344,7 +459,11 @@ export default function HomePage() {
                     <CardTitle>{pkg} Package</CardTitle>
                   </CardHeader>
                   <CardContent>
+<<<<<<< HEAD
                     <p className="text-2xl font-bold mb-4">Starting at ₹{(index + 1) * 5000}</p>
+=======
+                    <p className="text-2xl font-bold mb-4">Starting at ${(index + 1) * 500}</p>
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
                     <ul className="list-disc list-inside">
                       <li>{(index + 1) * 2} hours of coverage</li>
                       <li>{(index + 1) * 50}+ edited photos</li>
@@ -387,12 +506,21 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
             <div className="grid gap-8 md:grid-cols-2">
               <div>
+<<<<<<< HEAD
                 <form onSubmit={handleSubmit} className="space-y-4">
+=======
+                <form onSubmit={handleSubmit}>
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
                   <Input name="name" placeholder="Your Name" required onChange={handleChange} />
                   <Input name="email" placeholder="Your Email" type="email" required onChange={handleChange} />
                   <Textarea name="message" placeholder="Your Message" required onChange={handleChange} />
                   <Button type="submit">Send Message</Button>
                 </form>
+<<<<<<< HEAD
+=======
+
+                {status && <p className="mt-4 text-center">{status}</p>}
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
               </div>
               <div className="space-y-4">
                 <Card>
@@ -494,7 +622,11 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-8 text-center text-sm text-muted-foreground">
+<<<<<<< HEAD
             © 2024 Pandav Studios Photography. All rights reserved.
+=======
+            © 2024 Capture Studio Photography. All rights reserved.
+>>>>>>> 3a1e1d4c2a32b023ee537394e6aeca1824e2c62d
           </div>
         </div>
       </footer>
