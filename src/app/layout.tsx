@@ -4,6 +4,8 @@ import { ThemeProvider } from "next-themes"; // Import the ThemeProvider
 import "./globals.css";
 import { ToastProvider } from "@/components/ui/toast"; // Adjust this path as per your setup
 import { Toaster } from "@/components/ui/toaster"; // Import the Toaster component
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 // Font setup remains the same
 const geistSans = localFont({
@@ -113,6 +115,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system">
           <ToastProvider>
             {children}
+            <SpeedInsights />
             <Toaster /> {/* Add the Toaster component here */}
           </ToastProvider>
         </ThemeProvider>
