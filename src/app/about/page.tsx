@@ -130,7 +130,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <p className="mb-4">
-                Capture Studio was born out of a passion for preserving moments and telling stories through the lens. Founded in 2014 by a group of friends who shared a love for photography, we&apos;ve grown from a small local studio to a team of dedicated professionals serving clients across the country.
+                Pandav Studio was born out of a passion for preserving moments and telling stories through the lens. Founded in 2014 by a group of friends who shared a love for photography, we&apos;ve grown from a small local studio to a team of dedicated professionals serving clients across the country.
 
                 Our vision is to create timeless images that not only capture the visual essence of a moment but also the emotions and atmosphere surrounding it. We believe that every photograph should tell a story and evoke feelings, whether it&apos;s the joy of a wedding day, the pride of a graduate, or the professionalism of a corporate event.
 
@@ -139,8 +139,8 @@ export default function AboutPage() {
             </div>
             <div className="relative h-56 md:h-96">
               <Image
-                src="/placeholder.svg?height=600&width=800"
-                alt="Capture Studio team at work"
+                src="/images/crew.webp?height=600&width=800"
+                alt="Pandav Studio team at work"
                 layout="fill"
                 objectFit="cover"
                 className="rounded-lg"

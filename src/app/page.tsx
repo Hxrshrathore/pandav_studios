@@ -16,9 +16,9 @@ import { useToast } from "@/hooks/use-toast" // Import the toast hook
 
 // Sample hero slides using WebP format for optimization
 const heroSlides = [
-  { image: 'https://cdn.apnaventure.in/Images/1.webp', alt: 'Landscape photography in Ranchi' },
-  { image: 'https://cdn.apnaventure.in/Images/2.webp', alt: 'Portrait photography in Jharkhand' },
-  { image: 'https://cdn.apnaventure.in/Images/3.webp', alt: 'Event photography for Ranchi weddings' },
+  { image: '/images/homepage/1.webp', alt: 'Landscape photography in Ranchi' },
+  { image: '/images/homepage/2.webp', alt: 'Portrait photography in Jharkhand' },
+  { image: '/images/homepage/3.webp', alt: 'Event photography for Ranchi weddings' },
 ]
 
 const testimonials = [
@@ -149,7 +149,7 @@ export default function HomePage() {
         <Link className="flex items-center justify-center" href="/">
                 <Image
                 src="/images/logo.png" // Replace this with the path to your logo file
-                alt="Pandav Studios"
+                alt="Pandav Studios LOGO"
                 width={90} // This ensures the image matches the previous icon size
                 height={24} // Adjust these values to match the size of the Camera icon (h-6 w-6 is 24px)
                 />
@@ -236,7 +236,7 @@ export default function HomePage() {
             <div className="md:flex items-center">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <Image
-                  src="https://cdn.apnaventure.in/Images/crew.webp?height=400&width=600"
+                  src="/images/crew.webp?height=400&width=600"
                   alt="Our photography team in Ranchi"
                   width={600}
                   height={400}
@@ -289,7 +289,7 @@ export default function HomePage() {
               {[1, 2, 3, 4, 5, 6].map((i) => (
                 <Image
                   key={i}
-                  src={`https://cdn.apnaventure.in/Images/${i}.webp`}
+                  src={`/images/portfolio/${i}.webp`}
                   alt={`Portfolio image ${i} from our Ranchi photoshoots`}
                   width={400}
                   height={300}

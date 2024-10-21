@@ -21,18 +21,18 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 
 // Sample portfolio data
 const portfolioItems = [
-  { id: 1, title: "Sunset Serenity", category: "Landscape", image: "/placeholder.svg?height=400&width=600" },
-  { id: 2, title: "Urban Exploration", category: "Street", image: "/placeholder.svg?height=400&width=600" },
-  { id: 3, title: "Joyful Moments", category: "Wedding", image: "/placeholder.svg?height=400&width=600" },
-  { id: 4, title: "Nature's Beauty", category: "Landscape", image: "/placeholder.svg?height=400&width=600" },
-  { id: 5, title: "Corporate Excellence", category: "Commercial", image: "/placeholder.svg?height=400&width=600" },
-  { id: 6, title: "Timeless Portraits", category: "Portrait", image: "/placeholder.svg?height=400&width=600" },
-  { id: 7, title: "Culinary Delights", category: "Food", image: "/placeholder.svg?height=400&width=600" },
-  { id: 8, title: "Architectural Marvels", category: "Architecture", image: "/placeholder.svg?height=400&width=600" },
-  { id: 9, title: "Wildlife Wonders", category: "Nature", image: "/placeholder.svg?height=400&width=600" },
-  { id: 10, title: "Fashion Forward", category: "Fashion", image: "/placeholder.svg?height=400&width=600" },
-  { id: 11, title: "Sports Action", category: "Sports", image: "/placeholder.svg?height=400&width=600" },
-  { id: 12, title: "Event Excitement", category: "Event", image: "/placeholder.svg?height=400&width=600" },
+  { id: 1, title: "Sunset Serenity", category: "Landscape", image: "/images/dump/1.webp?height=400&width=600" },
+  { id: 2, title: "Urban Exploration", category: "Street", image: "/images/dump/2.webp?height=400&width=600" },
+  { id: 3, title: "Joyful Moments", category: "Wedding", image: "/images/dump/3.webp?height=400&width=600" },
+  { id: 4, title: "Nature's Beauty", category: "Landscape", image: "/images/dump/4.webp?height=400&width=600" },
+  { id: 5, title: "Corporate Excellence", category: "Commercial", image: "/images/dump/5.webp?height=400&width=600" },
+  { id: 6, title: "Timeless Portraits", category: "Portrait", image: "/images/dump/6.webp?height=400&width=600" },
+  { id: 7, title: "Culinary Delights", category: "Food", image: "/images/dump/7.webp?height=400&width=600" },
+  { id: 8, title: "Architectural Marvels", category: "Architecture", image: "/images/dump/8.webp?height=400&width=600" },
+  { id: 9, title: "Wildlife Wonders", category: "Nature", image: "/images/dump/9.webp?height=400&width=600" },
+  { id: 10, title: "Fashion Forward", category: "Fashion", image: "/images/dump/10.webp?height=400&width=600" },
+  { id: 11, title: "Sports Action", category: "Sports", image: "/images/dump/11.webp?height=400&width=600" },
+  { id: 12, title: "Event Excitement", category: "Event", image: "/images/dump/12.webp?height=400&width=600" },
 ]
 
 export default function PortfolioPage() {
