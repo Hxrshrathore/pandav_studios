@@ -28,20 +28,20 @@ export const siteMetadata = {
     title: "Pandav Studios - Photography Studio in Ranchi",
     description: "Capture your moments with the best wedding and event photographers in Ranchi, Jharkhand.",
     url: "https://www.pandav.studio",
-    image: "https://cdn.apnaventure.in/Images/1.webp",
+    image: "/images/logo.png",
   },
   twitter: {
     card: "summary_large_image",
     site: "@pandavstudios",
     title: "Pandav Studios - Photography in Ranchi",
     description: "Expert wedding, portrait, and event photography services in Ranchi, Jharkhand.",
-    image: "https://cdn.apnaventure.in/Images/1.webp",
+    image: "/images/logo.png",
   },
   structuredData: {
     "@context": "https://schema.org",
     "@type": "PhotographyBusiness",
     "name": "Pandav Studios",
-    "image": "https://cdn.apnaventure.in/Images/1.webp",
+    "image": "/images/logo.png",
     "description": "Pandav Studios provides professional photography services in Ranchi, Jharkhand. Specializing in weddings, portraits, and events.",
     "address": {
       "@type": "PostalAddress",
