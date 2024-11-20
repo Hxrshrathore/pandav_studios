@@ -25,7 +25,7 @@ const serviceCategories = [
       { name: "Wedding Ceremony Photography", image: "/images/services/Wedding Ceremony Photography.webp" },
       { name: "Wedding Preparation Photography", image: "/images/services/Wedding Preparation Photography.webp" },
       { name: "Wedding Albums", image: "/images/services/Wedding Albums.webp" },
-      { name: "Aerial Wedding Photography", image: "/images/services/Aerial Wedding Photography.webp" },
+      { name: "Aerial Wedding Photography", image: "/images/services/Arial Wedding Photography.webp" },
     ],
   },
   {
@@ -36,7 +36,7 @@ const serviceCategories = [
       { name: "Family Photoshoot", image: "/images/services/Family Photoshoot.webp" },
       { name: "Baby Photoshoot", image: "/images/services/Baby Photoshoot.webp" },
       { name: "Bridal Photography", image: "/images/services/Bridal Photography.webp" },
-      { name: "Black-and-White Photography", image: "/images/services/Black and White Photoshoot.webp" },
+      { name: "Black-and-White Photography", image: "/images/services/Black and white photoshoot.webp" },
       { name: "Maternity Shoots", image: "/images/services/Maternity Shoots.webp" },
     ],
   },
