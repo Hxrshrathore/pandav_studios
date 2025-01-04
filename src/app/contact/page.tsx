@@ -262,15 +262,15 @@ export default function ContactPage() {
               <CardContent className="space-y-4">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-5 w-5 text-muted-foreground" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 93344 39313</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-5 w-5 text-muted-foreground" />
-                  <span>contact@capturestudio.com</span>
+                  <span>studiopandav@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-5 w-5 text-muted-foreground" />
-                  <span>123 Photography Lane, Shutter City, PC 12345</span>
+                  <span>VIP Market, Ratu Rd, near SBI Bank, Indrapuri Colony, Ranchi</span>
                 </div>
                 <div className="flex space-x-4 mt-4">
                   <Link href="https://www.instagram.com/studio_pandav_vision/" className="text-muted-foreground hover:text-foreground">
@@ -314,7 +314,7 @@ export default function ContactPage() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-            <Link href="https://www.instagram.com/studio_pandav_vision/" className="text-muted-foreground hover:text-foreground">
+            <Link href="https://www.instagram.com/studiopandavvision/" className="text-muted-foreground hover:text-foreground">
               <Instagram className="h-5 w-5" />
             </Link>
             <Link href="https://www.facebook.com/profile.php?id=61550744053524" className="text-muted-foreground hover:text-foreground">
