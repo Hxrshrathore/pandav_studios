@@ -273,7 +273,7 @@ export default function ContactPage() {
                   <span>VIP Market, Ratu Rd, near SBI Bank, Indrapuri Colony, Ranchi</span>
                 </div>
                 <div className="flex space-x-4 mt-4">
-                  <Link href="https://www.instagram.com/studio_pandav_vision/" className="text-muted-foreground hover:text-foreground">
+                  <Link href="https://www.instagram.com/studiopandavvision/" className="text-muted-foreground hover:text-foreground">
                     <Instagram className="h-6 w-6" />
                   </Link>
                   <Link href="https://www.facebook.com/profile.php?id=61550744053524" className="text-muted-foreground hover:text-foreground">
