@@ -584,7 +584,7 @@ export default function HomePage() {
                 <h3 className="font-semibold mb-4">Connect</h3>
                 <div className="flex space-x-4">
                   <Link
-                    href="https://www.instagram.com/studio_pandav_vision/"
+                    href="https://www.instagram.com/studiopandavvision/"
                     className="text-foreground hover:text-primary"
                   >
                     <Instagram className="h-6 w-6" />
