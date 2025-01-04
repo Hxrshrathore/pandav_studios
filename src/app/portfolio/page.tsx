@@ -192,7 +192,7 @@ export default function PortfolioPage() {
             </Link>
           </nav>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">
-            <Link href="https://www.instagram.com/studio_pandav_vision/" className="text-muted-foreground hover:text-foreground">
+            <Link href="https://www.instagram.com/studiopandavvision/" className="text-muted-foreground hover:text-foreground">
               <Instagram className="h-5 w-5" />
             </Link>
             <Link href="https://www.facebook.com/profile.php?id=61550744053524" className="text-muted-foreground hover:text-foreground">
